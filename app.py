@@ -11,11 +11,6 @@ pipe = DiffusionPipeline.from_pretrained(
     low_cpu_mem_usage=False,
 )
 pipe.to("cuda")
-
-# ======== AoTI compilation + FA3 ========
-# pipe.transformer.layers._repeated_blocks = ["ZImageTransformerBlock"]
-# spaces.aoti_blocks_load(pipe.transformer.layers, "zerogpu-aoti/Z-Image", variant="fa3")
-
 print("Pipeline loaded!")
 
 @spaces.GPU
@@ -65,7 +60,7 @@ with gr.Blocks(fill_height=True) as demo:
     # Header
     gr.Markdown(
         """
-        # ⚡ Z-Image-Turbo • JamberTech
+        # ⚡ JamberTech Image Studio
         **Ultra-fast AI image generation** • Generate stunning images in just 8 steps • Powered by **JamberTechOfficial**
         """,
         elem_classes="header-text"
@@ -168,10 +163,9 @@ with gr.Blocks(fill_height=True) as demo:
         """
         ---
         <div style="text-align: center; opacity: 0.7; font-size: 0.9em; margin-top: 1rem;">
-        <strong>Model:</strong> <a href="https://huggingface.co/Tongyi-MAI/Z-Image-Turbo" target="_blank">Tongyi-MAI/Z-Image-Turbo</a> (Apache 2.0 License) • 
-        <strong>Studio by:</strong> <a href="https://github.com/zohramushtaqahmad-del/JamberTech-Image-Studio" target="_blank">JamberTechOfficial</a> • 
-        <strong>Original Space:</strong> <a href="https://huggingface.co/spaces/mrfakename/Z-Image-Turbo" target="_blank">@mrfakename</a> • 
-        <strong>Optimizations:</strong> <a href="https://huggingface.co/multimodalart" target="_blank">@multimodalart</a> (FA3 + AoTI)
+        <strong>Studio:</strong> <a href="https://github.com/zohramushtaqahmad-del/JamberTech-Image-Studio" target="_blank">JamberTechOfficial</a> • 
+        <strong>Hardware:</strong> ZeroGPU (NVIDIA A10G) • 
+        <strong>License:</strong> Apache 2.0
         </div>
         """,
         elem_classes="footer-text"

@@ -1,5 +1,5 @@
 ---
-title: Z Image Turbo JamberTech
+title: JamberTech Image Studio
 emoji: ⚡
 colorFrom: yellow
 colorTo: yellow
