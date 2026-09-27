@@ -163,7 +163,7 @@ with gr.Blocks(fill_height=True) as demo:
         """
         ---
         <div style="text-align: center; opacity: 0.7; font-size: 0.9em; margin-top: 1rem;">
-        <strong>Studio:</strong> <a href="https://github.com/zohramushtaqahmad-del/JamberTech-Image-Studio" target="_blank">JamberTechOfficial</a> • 
+        <strong>Studio:</strong> <a href="https://share.google/6Y7YBP72EOzow3Sm0" target="_blank">JamberTechOfficial</a> • 
         <strong>Hardware:</strong> ZeroGPU (NVIDIA A10G) • 
         <strong>License:</strong> Apache 2.0
         </div>
